@@ -34,9 +34,9 @@ jobs:
     steps:
      - name: Print env variables
        run : |
-        "Var1 = ${{ env.VAR1 }}"
-        "Var2 = ${{ env.VAR2 }}"
-        "Var3 = $LOCAL_VAR
+        echo "Var1 = ${{ env.VAR1 }}"
+        echo "Var2 = ${{ env.VAR2 }}"
+        echo "Var3 = $LOCAL_VAR
        env:
         LOCAL_VAR : "This is local variable"
      - name: Privet Hello Message
