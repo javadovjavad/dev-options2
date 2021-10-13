@@ -15,6 +15,7 @@ jobs:
     
   mydeploy:
     runs-on: ubuntu-latest
+    needs: [ mytesting ]
     
     steps:
      - name: Privet Hello Message
