@@ -13,13 +13,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-     - name: Privet Hello Message
-       run : echo "Hello world! from GitAction Testing!"
+     - name: Git clone Actions
+       uses: actions/checkout@v1
+       
+     - name: List folder
+       run : ls -la 
+       
      - name: Execute commands
        run : |
-        pwd > 123.tx
-        cat 123.tx
-        echo "Application name: ${{ env.APPLICATION_NAME }}"
+        touch  ${{ env.APPLICATION_NAME }}.tx
+        
       
   mydeploy:
     runs-on: ubuntu-latest
