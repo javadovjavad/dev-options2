@@ -30,9 +30,7 @@ jobs:
      - name: Privet Hello Message
        run : echo "Hello world! from GitAction Dep!"
      - name: Execute commands
-       run : |
+       run: |
         pwd > 123.tx
         cat 123.tx
         echo "Deploy name: ${{ env.DEPLOY_PACKAGE_NAME }}"
-        |
-       
