@@ -1,10 +1,6 @@
-# This is a basic workflow to help you get started with Actions
-
 name: MyGithubActions-Basics
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the master branch
   push:
     branches:
       - master 
@@ -12,13 +8,14 @@ on:
 jobs:
   mytesting:
     runs-on: ubuntu-latest
+
     steps:
      - name: Privet Hello Message
-       run:   echo "Hello world! from GitAction Testing!"
+       run : echo "Hello world! from GitAction Testing!"
     
-  my_deployment:
+  mydeploy:
     runs-on: ubuntu-latest
+    
     steps:
      - name: Privet Hello Message
-       run:   echo "Hello world! from GitAction Deploy!"
-    steps:
+       run : echo "Hello world! from GitAction Dep!"
