@@ -1,4 +1,7 @@
 name: MyGithubActions-Basics
+env:
+  APPLICATION_NAME    : "MyProgram"
+  DEPLOY_PACKAGE_NAME : "deploy-ver-${{ github.sha }}"
 
 on:
   push:
@@ -12,6 +15,12 @@ jobs:
     steps:
      - name: Privet Hello Message
        run : echo "Hello world! from GitAction Testing!"
+     - name: Execute commands
+       run : |
+        pwd > 123.tx
+        cat 123.tx
+        echo "Application name: ${{ env.APPLICATION_NAME }}"
+        |
     
   mydeploy:
     runs-on: ubuntu-latest
@@ -20,3 +29,10 @@ jobs:
     steps:
      - name: Privet Hello Message
        run : echo "Hello world! from GitAction Dep!"
+     - name: Execute commands
+       run : |
+        pwd > 123.tx
+        cat 123.tx
+        echo "Deploy name: ${{ env.DEPLOY_PACKAGE_NAME }}"
+        |
+       
