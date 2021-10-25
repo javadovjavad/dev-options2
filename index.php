@@ -15,5 +15,16 @@ if($_GET['name']){
 
 
 }
-
 ?>
+
+<html>
+<head>
+Website 001
+</head>
+<body>
+<center>
+<h2>Testing</h2>
+<p><font color=blue>Hello world!</font></p>
+</center>
+</body>
+</html>
